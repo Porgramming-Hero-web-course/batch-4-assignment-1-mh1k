@@ -95,12 +95,13 @@ The typeof type guard lets us refine a variable's type by checking its type with
 
 ### 2. instanceof - Type guard
 
-instanceof type guard checks if an object is an instance of a specified class or constructor function at runtime. It returns a boolean value: true if the object is an instance of the type, and false .
+The instanceof type guard allows you to check if an object is an instance of a specific class.
+It returns a boolean value: true if the object is an instance of the type, and false .
 
 > [example]
 > Animal class is the parent class and others child class, others extends with parent class.
 > getAnimal function we passed the instance creation as param and in this function we declared a if else condition
-  after that we are checking the animal is instance of which class if it's return true it will move on next step
+  after that we are checking the animal is instance of which class if it's return true it will move on next step.
 
 
   ```
@@ -161,7 +162,8 @@ instanceof type guard checks if an object is an instance of a specified class or
 
   ```
 
-
+## > [!Using Type Guards]
+## > we are like the type whisperer: 'Yes, TypeScript, this really is a Cat..
 
 
 

@@ -19,15 +19,15 @@
         email: string;
     }
 
-    const myProfile: Profile = { name: "Alice", age: 25, email: "alice@example.com" }
-
+    
     const updateProfile = <T>(user: Profile, value: Partial<Profile>): Profile => {
-
+        
         const updateData = {...user , ...value}
-
+        
         return updateData;
     }
-
+    
+    const myProfile: Profile = { name: "Alice", age: 25, email: "alice@example.com" }
 
     console.log(updateProfile (myProfile, { age: 36}));
 

@@ -30,23 +30,27 @@
 
     type CircleRectangle = Circle | Rectangle
 
-    const calculateShapeArea = (shapes: CircleRectangle) => {
+    const calculateShapeArea = (shapes: CircleRectangle): number | string => {
 
         if ("radius" in shapes) {
             const circleArea = Math.PI * shapes.radius * shapes.radius;
-            return circleArea.toFixed(2)
+            const circleAreaNumber = parseFloat(circleArea.toFixed(2))
+            return circleAreaNumber;
         }
-        else {
+        else if ("width" in shapes && "height" in shapes) {
             const rectangleArea = shapes.height * shapes.width;
             return rectangleArea;
+        }
+        else {
+            return ("not a shape")
         }
 
     }
 
 
 
-    const circleArea = calculateShapeArea ({ shape: "circle", radius: 5 });
-    console.log(circleArea);
+    const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
+    // console.log(circleArea);
 
 
     const rectangleArea = calculateShapeArea({
@@ -55,7 +59,7 @@
         height: 17
     });
 
-    console.log(rectangleArea);
+    // console.log(rectangleArea);
 
 
 

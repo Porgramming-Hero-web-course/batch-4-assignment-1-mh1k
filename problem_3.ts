@@ -11,27 +11,25 @@
 
     const countWordOccurrences = (value1: string, value2: string): number => {
 
-        const words = value1.toLocaleLowerCase().split(" "); 
-        // if (value2 === "") {
-        //     return 0;
-        // } else {
-        //     const sameWord = words.filter((word) => word.includes(value2.toLocaleLowerCase())); // filter the word
-        //     return sameWord.length;
-        // }
-        const unique: string[] = [];
+        
+            const words = value1.toLocaleLowerCase().split(" ");
 
-        for (const word of words) {
-            if (word === value2.toLocaleLowerCase()) {
-                unique.push(word)
+            const countWord: string[] = [];
+
+            for (const word of words) {
+                if (word === value2.toLocaleLowerCase()) {
+                    countWord.push(word)
+                }
             }
-        }
 
-        return unique.length
+            return countWord.length
+
+        
 
     }
 
-    const result = countWordOccurrences("TypeScript is great. I love is TypeScript!", "typescript");
-    console.log(result);
+    const result = countWordOccurrences("I love is TypeScript", "typescript");
+    // console.log(result);
 
 
 
