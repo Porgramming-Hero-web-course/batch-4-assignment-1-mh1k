@@ -60,7 +60,6 @@
     });
 
     // console.log(rectangleArea);
-    console.log();
     
 
 

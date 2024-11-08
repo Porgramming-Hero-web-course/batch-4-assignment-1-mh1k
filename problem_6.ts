@@ -30,7 +30,6 @@
     const myProfile: Profile = { name: "Alice", age: 25, email: "alice@example.com" }
 
     console.log(updateProfile (myProfile, { age: 36}));
-    console.log();
     
 
 

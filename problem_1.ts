@@ -24,7 +24,6 @@
 
     const result = sumArray([5, 1, 5, 4]);
     // console.log(result);
-    console.log();
     
 
     
