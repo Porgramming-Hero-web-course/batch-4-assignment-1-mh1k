@@ -44,9 +44,52 @@ The typeof type guard lets us refine a variable's type by checking its type with
 
     const result1 = add("2", "4");
     const result2 = add(2, 4);
-    console.log(result1); // output - 24;
-    console.log(result2); // output - 6;
+    console.log(result1); 
+    console.log(result2); 
 
+  ```
+  ```
+  24
+  6
+  ```
+
+### 2. in - Type guard
+
+'in' operator is used to narrow or refine the type of an object within a conditional statement. It checks whether a specific property or key exists within an object, and if it does, it narrows the type of that object to include that property.
+
+> [example]
+> in this function we declared a condition, in this condiotion its checking role property in user(object), if it is exits in user object it will console log the output.
+> in Alias type we declared the role using literal type.
+
+
+  ```
+    type NormalUser = {
+        name : string;
+    }
+
+    type AdminUser = {
+        name: string;
+        role : "Admin";
+    }
+
+    const getUser = (user: NormalUser | AdminUser)=>{
+        if ("role" in user) {
+            console.log(`My name is ${user.name} and my role is ${user.role}`);
+            
+        } else {
+            console.log(`My name is ${user.name}`);
+            
+        }
+    }
+
+    getUser({name:"Elon", role :"Admin"})
+    getUser({name:"Mark"})               
+
+  ```
+
+  ```
+  My name is Elon and my role is Admin
+  My name is Mark
   ```
 
 
