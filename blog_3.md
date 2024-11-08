@@ -100,7 +100,7 @@ It returns a boolean value: true if the object is an instance of the type, and f
 
 > [example]
 > Animal class is the parent class and others child class, others extends with parent class.
-> getAnimal function we passed the instance creation as param and in this function we declared a if else condition
+> In getAnimal function we passed the instance creation as param and in this function we declared a if else condition
   after that we are checking the animal is instance of which class if it's return true it will move on next step.
 
 
@@ -163,7 +163,7 @@ It returns a boolean value: true if the object is an instance of the type, and f
   ```
  
 
-## with the type guards we are like the type whisperer: Yes, TypeScript, this really is a Cat so you can't ask a cat to bark.
+## with the type guards we are like the type whisperer: Yes, TypeScript, this really is a Cat so you can't force a cat to bark.
 
 
 
