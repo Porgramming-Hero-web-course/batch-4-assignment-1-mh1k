@@ -11,13 +11,13 @@
 
 
     class Car {
-        
+
         constructor(public make: string, public model: string, public year: number) { }
 
-        getCarAge(): string {
+        getCarAge(): number {
             const getcurrentYear = new Date().getFullYear();
             const carAge = getcurrentYear - this.year;
-            return (`${carAge} (assuming current year is ${getcurrentYear})`);
+            return carAge
 
         }
     }
