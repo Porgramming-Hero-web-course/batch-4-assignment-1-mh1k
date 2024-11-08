@@ -161,9 +161,9 @@ It returns a boolean value: true if the object is an instance of the type, and f
   bow-wow bow-wow bow-wowwww
 
   ```
+ 
 
-## > [!Using Type Guards]
-## > we are like the type whisperer: 'Yes, TypeScript, this really is a Cat..
+## | with the type guards we are like the type whisperer: 'Yes, TypeScript, this really is a Cat..
 
 
 
