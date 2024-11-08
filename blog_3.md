@@ -93,6 +93,74 @@ The typeof type guard lets us refine a variable's type by checking its type with
   My name is Mark
   ```
 
+### 2. instanceof - Type guard
+
+instanceof type guard checks if an object is an instance of a specified class or constructor function at runtime. It returns a boolean value: true if the object is an instance of the type, and false .
+
+> [example]
+> Animal class is the parent class and others child class, others extends with parent class.
+> getAnimal function we passed the instance creation as param and in this function we declared a if else condition
+  after that we are checking the animal is instance of which class if it's return true it will move on next step
+
+
+  ```
+    class Animal {
+        name : string;
+        species : string;
+
+        constructor(name: string, species :string) {
+            this.name = name;
+            this.species = species;
+        }
+
+        makeSound(){
+            console.log("who I am!!!"); 
+        }
+    }
+
+    class Cat extends Animal {
+        constructor(name: string, species :string){
+            super(name, species);
+        }
+         makeMeow(){
+            console.log("meow meow meowwwww"); 
+        }
+    }
+
+    class Dog extends Animal {
+        constructor(name: string, species :string){
+            super(name, species);
+        }
+        makebark(){
+            console.log("bow-wow bow-wow bow-wowwww"); 
+        }
+    }
+
+    const getAnimal =(animal: Animal)=>{
+        if (animal instanceof Cat) {
+            animal.makeMeow();
+        }
+        else if (animal instanceof Dog) {
+            animal.makebark();
+        }
+        else{
+            animal.makeSound();
+        }
+    }      
+
+    const cat = new Cat ("kitty", "cat");
+    const dog = new Dog ("rock","dog");
+    getAnimal(cat);
+    getAnimal(dog);        
+
+  ```
+ <ins>Output</ins>
+  ```
+  meow meow meowwwww
+  bow-wow bow-wow bow-wowwww
+
+  ```
+
 
 
 
