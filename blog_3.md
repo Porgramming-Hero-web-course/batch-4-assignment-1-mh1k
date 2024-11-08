@@ -27,7 +27,7 @@ There are several types of Type Guards in TypeScript. let's see how we use it in
 The typeof type guard lets us refine a variable's type by checking its type with the typeof operator. This approach is especially helpful when working with primitive types, such as string, number, boolean, symbol, and undefined. It’s also useful for determining if a variable is a function or an object, helping us handle different types safely and correctly in our code.
 
 > [example]
-> in this function we declared the variable type and it will process by cheaking their variable type.
+> in this function we declared the variable type and it will process by checking their variable type.
 > and it will return either number or string depends on its input.
 
 
