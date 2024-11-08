@@ -14,10 +14,10 @@
         
         constructor(public make: string, public model: string, public year: number) { }
 
-        getCarAge() {
+        getCarAge(): string {
             const getcurrentYear = new Date().getFullYear();
             const carAge = getcurrentYear - this.year;
-            return carAge;
+            return (`${carAge} (assuming current year is ${getcurrentYear})`);
 
         }
     }
