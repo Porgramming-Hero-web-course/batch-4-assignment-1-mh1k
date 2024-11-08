@@ -48,8 +48,8 @@ The typeof type guard lets us refine a variable's type by checking its type with
     console.log(result2); 
 
   ```
+<ins>Output</ins>
   ```
-  <ins>Output</ins>
   24
   6
   ```
@@ -87,9 +87,8 @@ The typeof type guard lets us refine a variable's type by checking its type with
     getUser({name:"Mark"})               
 
   ```
-
+ <ins>Output</ins>
   ```
-  <ins>Output</ins>
   My name is Elon and my role is Admin
   My name is Mark
   ```
