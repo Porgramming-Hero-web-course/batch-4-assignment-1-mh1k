@@ -9,15 +9,42 @@ Using type guards, we can check and confirm variable types at specific points in
 
 ### Here are some reasons why type guards are important
 
-- Safe Type Assertions : Type guards allow to safely declare the type of a value, prevents runtime errors that 
+- **Safe Type Assertions :** Type guards allow to safely declare the type of a value, prevents runtime errors that 
   can occur because of incorrect assumptions.
 
-- Conditional Code Execution : It's conditionally execute different code based on the type of a value.
+- **Conditional Code Execution :** It's conditionally execute different code based on the type of a value.
 
-- Handling of Unions and Intersections : Type guards make it easy way to handle unions and Intersections types by
-  allowing to narrow down to specific types as we needed.
+- **Handling of Unions and Intersections :** Type guards make it easy way to handle unions and Intersections types
+  by allowing to narrow down to specific types as we needed.
 
-  
+
+  ## Various Types of Type Guards and Their Use Cases
+
+  There are several types of Type Guards in TypeScript. let's see how we use it in code.
+
+  ### 1. typeof - Type guard
+
+
+
+  ```
+    type AlphaNeumeric = string | number;
+
+    const add = (value1: AlphaNeumeric, value2: AlphaNeumeric): AlphaNeumeric => {
+        if (typeof value1 === "number" && typeof value2 === "number") {
+            return value1 + value2
+        } else {
+            return value1.toString() + value2.toString();
+        }
+    }
+
+    const result1 = add("2", "4");
+    const result2 = add(2, 4);
+    console.log(result1); // output - 24;
+    console.log(result2); // output - 6;
+
+  ```
+
+
 
 
 
